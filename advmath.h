@@ -210,11 +210,6 @@ namespace AdvMath // namespace Advanced Math (Opérations Mathématiques avancé
             Corners[2] = C;
         }
 
-        // -GETTERS-
-
-        // Retourne les sommets du triangle
-        CORNERS3D corners() const { return Corners; }
-
         // -SETTERS-
 
         // Affecte des valeurs aux sommets du triangle
