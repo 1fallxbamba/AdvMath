@@ -147,7 +147,7 @@ namespace AdvMath // namespace Advanced Math (Opérations Mathématiques avancé
     class Triangle3D
     {
     private:
-        CORNERS3D Corners;
+        CORNERS3D _Corners;
 
         /*-La formule pour calculer la distance entre deux points de l'espace (x1, y1, z1) et (x2, y2, z2) est :
                 sqrt( (x1 - x2)² + (y1 - y2)² + (z1 - z2)² )
@@ -156,19 +156,19 @@ namespace AdvMath // namespace Advanced Math (Opérations Mathématiques avancé
         // Distance entre le sommet 1 et le sommet 2
         double d_1()
         {
-            return sqrt(pow((Corners[0].x - Corners[1].x), 2) + pow((Corners[0].y - Corners[1].y), 2) + pow((Corners[0].z - Corners[1].z), 2));
+            return sqrt(pow((_Corners[0].x - _Corners[1].x), 2) + pow((_Corners[0].y - _Corners[1].y), 2) + pow((_Corners[0].z - _Corners[1].z), 2));
         }
 
         // Distance entre le sommet 2 et le sommet 3
         double d_2()
         {
-            return sqrt(pow((Corners[1].x - Corners[2].x), 2) + pow((Corners[1].y - Corners[2].y), 2) + pow((Corners[1].z - Corners[2].z), 2));
+            return sqrt(pow((_Corners[1].x - _Corners[2].x), 2) + pow((_Corners[1].y - _Corners[2].y), 2) + pow((_Corners[1].z - _Corners[2].z), 2));
         }
 
         // Distance entre le sommet 1 et le sommet 3
         double d_3()
         {
-            return sqrt(pow((Corners[0].x - Corners[2].x), 2) + pow((Corners[0].y - Corners[2].y), 2) + pow((Corners[0].z - Corners[2].z), 2));
+            return sqrt(pow((_Corners[0].x - _Corners[2].x), 2) + pow((_Corners[0].y - _Corners[2].y), 2) + pow((_Corners[0].z - _Corners[2].z), 2));
         }
 
         // Verifie si le triangle est isocèle
@@ -205,9 +205,9 @@ namespace AdvMath // namespace Advanced Math (Opérations Mathématiques avancé
     public:
         Triangle3D(Point3D A = {0, 0, 0}, Point3D B = {0, 0, 0}, Point3D C = {0, 0, 0})
         {
-            Corners[0] = A;
-            Corners[1] = B;
-            Corners[2] = C;
+            _Corners[0] = A;
+            _Corners[1] = B;
+            _Corners[2] = C;
         }
 
         // -SETTERS-
